@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Banner />
     <HeaderDefault />
     <Nuxt />
   </div>
@@ -7,10 +8,13 @@
 
 <script>
 import HeaderDefault from '~/components/HeaderDefault'
+import Banner from '~/components/Banner'
+
 
 export default {
   components: {
     HeaderDefault,
+    Banner,
   }
 }
 </script>

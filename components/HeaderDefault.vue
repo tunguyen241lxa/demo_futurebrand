@@ -1,14 +1,14 @@
 <template>
   <div>
   <b-navbar class ="nav-brand-future" toggleable="lg" type="light" variant="light">
-    <b-navbar-brand href="#">NavBar</b-navbar-brand>
+    <b-navbar-brand class="brand noHover" href="#">BAND</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item href="#">Link</b-nav-item>
-        <b-nav-item href="#" disabled>Disabled</b-nav-item>
+        <b-nav-item href="#">DOCS</b-nav-item>
+        <b-nav-item href="#" disabled>VIDEO COURSES</b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
@@ -55,11 +55,28 @@ export default {
 
 
 .nav-brand-future {
-  overflow: hidden;
+  // overflow: hidden;
+  height: 40px;
+  padding: 10px 60px;
   background-color: rgb(255, 255, 255);
   position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
+  a.brand::before {
+  content: "FUTURE ";
+  color: #e87821;
+  }
+  a.brand::after {
+    content: " VIỆT NAM";
+      color: #1794c7;
+  }
+  a.brand {
+    color:#35a606;
+  }
+  a.noHover {
+    pointer-events: none;
+  }
   .toggle {
     margin-right: 0.5rem !important;
   }

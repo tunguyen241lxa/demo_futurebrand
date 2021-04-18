@@ -8,22 +8,26 @@
         Future Brand Vietnam
       </h1> -->
       <div class="links home-right">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Why Future Brand Việt Nam ?
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GET STARTED
-        </a>
+        <h1>Happy From Sharing</h1>
+        <p>
+          <a
+            href="https://nuxtjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button--green"
+          >
+            Why Future Brand Việt Nam ?
+          </a>
+          <a
+            href="https://github.com/nuxt/nuxt.js"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button--grey"
+          >
+            GET STARTED
+          </a>
+        </p>
+        
         
       </div>
     </div>
@@ -58,6 +62,27 @@ export default {
 
     .home-right {
       width: 60%;
+      margin: 80px auto auto;
+      h1 {
+        color: #273849;
+        font-weight: 300;
+        margin: 0;
+        font-size: 3.2em;
+      }
+      p {
+        display: block;
+        margin-block-start: 1em;
+        word-spacing: 0.05em;
+        margin-block-end: 1em;
+        a {
+          margin: 1em 0;
+          font-size: 1.05em;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          min-width: 8em;
+          text-align: center;
+        }
+      }
       .subtitle {
         font-weight: 300;
         font-size: 42px;

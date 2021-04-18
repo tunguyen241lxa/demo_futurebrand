@@ -7,7 +7,9 @@
 
     <b-collapse id="nav-collapse" class="header-right" is-nav>
       <b-navbar-nav class="header-center">
-        <b-nav-item href="#">TRANG CHỦ</b-nav-item>
+        <b-nav-item href="#">
+          TRANG CHỦ
+        </b-nav-item>
         <b-nav-item href="#" >VỀ CHÚNG TÔI</b-nav-item>
         <b-nav-item href="#" >KHÓA HỌC</b-nav-item>
         <!-- <b-nav-item href="#" disabled>BLOG</b-nav-item> -->
@@ -25,7 +27,7 @@
         <b-nav-form>
           <toggle-button class="toggle" v-model="myDataVariable"/>
 
-          <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
+          <!-- <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input> -->
           <!-- <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button> -->
         </b-nav-form>
 
@@ -95,6 +97,7 @@ export default {
     }
     .header-right-mini {
       width: 20%;
+      justify-content: center;
     }
   }
   .toggle {

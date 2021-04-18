@@ -3,18 +3,21 @@
     <Banner />
     <HeaderDefault />
     <Nuxt />
+    <FooterDefault />
   </div>
 </template>
 
 <script>
 import HeaderDefault from '~/components/HeaderDefault'
 import Banner from '~/components/Banner'
+import Footer from '~/components/FooterDefault'
 
 
 export default {
   components: {
     HeaderDefault,
     Banner,
+    Footer,
   }
 }
 </script>

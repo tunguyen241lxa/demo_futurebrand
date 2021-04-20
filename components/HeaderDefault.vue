@@ -1,6 +1,6 @@
 <template>
-  <div>
-  <b-navbar class ="nav-brand-future" toggleable="lg" type="light" variant="light">
+  <div >
+  <b-navbar class ="nav-brand-future dynamic-subtitles" toggleable="lg" type="light" variant="light">
     <b-navbar-brand class="brand noHover headder-left" href="#">BAND</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -25,17 +25,11 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto header-right-mini">
         <b-nav-form>
-          <toggle-button class="toggle" v-model="myDataVariable"/>
-
-          <!-- <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input> -->
-          <!-- <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button> -->
+          <toggle-button id='toggle' class="toggle" v-model="darkMode"/>
+          
         </b-nav-form>
 
-        <!-- <b-nav-item-dropdown text="Lang" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">VI</b-dropdown-item>
-        </b-nav-item-dropdown> -->
-
+        
         <b-nav-item-dropdown right>
           <!-- Using 'button-content' slot -->
           <template #button-content>
@@ -55,14 +49,44 @@
 export default {
   data() {
     return {
-      myDataVariable: null,
+      darkMode: false,
     }
   },
+  mounted() {
+    // set 'app-background' class to body
+    let bodyElement = document.body;
+    bodyElement.classList.add("app-background");
+
+    let htmlElement = document.documentElement;
+    let theme = localStorage.getItem("theme");
+
+    if (theme === 'dark') {
+        htmlElement.setAttribute('theme', 'dark')
+        this.darkMode = true
+    } else {
+        htmlElement.setAttribute('theme', 'light');
+        this.darkMode = false
+    }
+  },
+  watch: {
+    darkMode: function () {
+        // add/remove class to/from html tag
+      let htmlElement = document.documentElement;
+
+      if (this.darkMode) {
+          localStorage.setItem("theme", 'dark');
+          htmlElement.setAttribute('theme', 'dark');
+      } else {
+          localStorage.setItem("theme", 'light');
+          htmlElement.setAttribute('theme', 'light');
+      }
+    }
+  }
 }
 </script>
 
 <style lang="scss">
-
+@import '@/assets/css/styles.scss';
 
 .nav-brand-future {
   // overflow: hidden;

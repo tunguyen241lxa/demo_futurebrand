@@ -1,0 +1,45 @@
+@import 'theme-colors';
+
+/*
+* === BODY, APP BACKGROUND ETC. ===
+*/
+html, body {
+  height: 100%;
+}
+
+.container {
+  max-width: 1040px;
+}
+
+.app-background {
+  background-color: var(--app-background-color);
+}
+
+.dynamic-title {
+  color: var(--dynamic-title-color);
+}
+
+.dynamic-subtitle {
+  color: var(--dynamic-subtitle-color);
+  padding-top: 10px;
+}
+
+/*
+* === THEME SWITCH ===
+*/
+button.toggle {
+  display: none;
+}
+
+button.toggle{
+  cursor: pointer;
+}
+
+button.toggle:not(:checked){
+  cursor: pointer;
+}
+
+button.toggle ,
+button.toggle:checked{
+  cursor: pointer;
+}

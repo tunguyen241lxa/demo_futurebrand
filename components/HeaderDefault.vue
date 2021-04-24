@@ -7,11 +7,11 @@
 
     <b-collapse id="nav-collapse" class="header-right" is-nav>
       <b-navbar-nav class="header-center">
-        <b-nav-item href="#">
+        <b-nav-item href="/">
           TRANG CHỦ
         </b-nav-item>
-        <b-nav-item href="#" >VỀ CHÚNG TÔI</b-nav-item>
-        <b-nav-item href="#" >KHÓA HỌC</b-nav-item>
+        <b-nav-item href="/about-us" >VỀ CHÚNG TÔI</b-nav-item>
+        <b-nav-item href="/course" >KHÓA HỌC</b-nav-item>
         <!-- <b-nav-item href="#" disabled>BLOG</b-nav-item> -->
         <b-nav-item-dropdown text="BLOG" right>
           <b-dropdown-item href="#">BRANDING</b-dropdown-item>

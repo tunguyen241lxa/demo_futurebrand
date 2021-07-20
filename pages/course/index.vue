@@ -19,7 +19,7 @@
         :class="{ active: isActive == 'course' }"
         @click="openMenu('course')"
         v-scroll-to="{ el: '#s1', offset: -90 }"
-        style="width: fit-content"
+        style="border-bottom: 1px dashed #e6e6e6;"
         >Khóa học đầu tiên</a
       >
       <a
@@ -28,7 +28,7 @@
         :class="{ active: isActive == 'step' }"
         @click="openMenu('step')"
         v-scroll-to="{ el: '#s2', offset: -80 }"
-        style="width: fit-content"
+        style="border-bottom: 1px dashed #e6e6e6;"
         >Bonus step</a
       >
       <a
@@ -37,7 +37,7 @@
         :class="{ active: isActive == 'step3' }"
         @click="openMenu('step3')"
         v-scroll-to="{ el: '#s3', offset: -80 }"
-        style="width: fit-content"
+        style="border-bottom: 1px dashed #e6e6e6;"
         >Create your first page</a
       >
       <!-- <button type="button" class="btn btn-success">Success</button> -->
@@ -56,6 +56,15 @@ export default {
   layout(context) {
     return "course";
   },
+   asyncData() {
+    console.info("Hello")
+  },
+  // validate(context) {
+  //   //eslint-disable-next-line no-console
+  //   console.log(context)
+
+  //   return /^[0-9]{9-12}$/.test(context.params.hid)
+  // },
   data() {
     return {
       isOpen: true,
@@ -72,6 +81,7 @@ export default {
       }
     ]
   },
+  
   mounted() {
     this.$nextTick(function() {
       window.addEventListener("scroll", function() {
@@ -92,6 +102,7 @@ export default {
       });
     });
   },
+  
   methods: {
     openClose() {
       this.isOpen = !this.isOpen;
@@ -165,7 +176,7 @@ export default {
   }
   .course-right {
     flex-direction: column;
-    width: 25%;
+    width: 20%;
     padding-top: 2rem;
 
     display: flex;
@@ -178,7 +189,8 @@ export default {
       text-decoration: none;
       color: #1f2529;
       font-size: 15px;
-
+      padding-top: .5rem;
+      padding-bottom: .5rem;
       &:hover {
         color: #71e271;
       }

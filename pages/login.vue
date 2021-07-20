@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-  <a href="" class="title center"><mdicon name="home" class="mdi-ic"/>Trờ về trang chủ</a>
+  <a href="/" class="title center"><mdicon name="home" class="mdi-ic"/>Trờ về trang chủ</a>
  <div class="table">
     <div class="content-center">
       <div class="form-login">
@@ -19,7 +19,7 @@
         </label>
       
 
-        <button>Đăng nhập</button>
+        <button class="btn-submit">Đăng nhập</button>
         <a class="forgot-password center">Quên mật khẩu</a>
         <div class="creat-account center">
           <label>Bạn chưa có tài khoản?</label>
@@ -34,11 +34,26 @@
 
 <script>
 export default {
+  methods: {
+  },
   layout: "login"
 }
 </script>
 
 <style lang="scss">
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #71e271;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.1) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
 .container {
   .title {
     display: flex;
@@ -46,34 +61,76 @@ export default {
     padding-bottom: 1rem!important;
     margin-bottom: 1.5rem!important;
     text-decoration: none;
+    color: #71e271;
   }
   .content-center {
     justify-content: center;
     display: flex;
     .form-login {
       flex-direction: column;
+      box-shadow: -25px 0px 0px 0px #04daf0, -50px 0px 0 #f3b70f;
       display: flex;
       padding: 40px;
-      border: solid 1px;
+      // border: solid 1px;
+      // background-color: #35a606;
+      background: linear-gradient(to right, #33CB82, #71e271);
+      // border-color: #35a606 !important;
       border-radius: 20px;
+      label {
+        color: white;
+        margin-top: 1rem;
+      }
       .brand::before {
       content: "FUTURE ";
-      color: #e87821;
+      color: #ffffff;
       }
       .brand {
-        color: #35a606;
+        color: #ffffff;
       }
       .brand::after {
         content: " VIỆT NAM";
-        color: #1794c7;
+        color: #ffffff;
       }
       .center {
         text-align: center;
       }
-      input {
-        outline: none
+      .forgot-password {
+        margin: 1rem;
+        font-weight: bold;
       }
-      
+      input {
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        // border: none;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 10px;
+        border: none;
+        color: white;
+      }
+      .btn-submit {
+        background: #f3b70f;
+        border: none;
+        // border-color: #fff !important;
+        color: #fff !important;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 10px;
+        // font-weight: bold;
+      }
+      a {
+        color: white;
+      }
+      .creat-account {
+        label {
+          color: white;
+          
+        }
+        a {
+          color: white;
+        
+        }
+      }
       
       
      

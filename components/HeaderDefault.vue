@@ -74,7 +74,7 @@
                 <em>User</em>
               </template>
               <b-dropdown-item href="#">Lang</b-dropdown-item>
-              <b-dropdown-item href="#">Billing</b-dropdown-item>
+              <b-dropdown-item href="#"><NuxtLink  to="/billing">Billing</NuxtLink></b-dropdown-item>
               <b-dropdown-item href="#">Profile</b-dropdown-item>
               <b-dropdown-item href="#"><NuxtLink  to="/login">Login</NuxtLink></b-dropdown-item>
 
@@ -132,6 +132,7 @@ export default {
   },
   watch: {
     darkMode: function() {
+      console.log("dark ...")
       // add/remove class to/from html tag
       let htmlElement = document.documentElement;
 
@@ -146,6 +147,7 @@ export default {
   },
   methods: {
     async openClose(menuItem) {
+      console.log('menu ...')
       // this.isOpen = !this.isOpen;
       this.isOpen = menuItem
       

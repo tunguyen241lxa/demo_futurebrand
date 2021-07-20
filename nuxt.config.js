@@ -22,7 +22,10 @@ export default {
     { src: "~/plugins/vue-js-toggle-button.js", ssr: false },
     { src: "~/plugins/vue-youtube-embed.js", ssr: false },
     { src: "~/plugins/vue-mdi.js", ssr: false },
-    { src: "~/plugins/vue-scrollto.js", ssr: false }
+    { src: "~/plugins/vue-scrollto.js", ssr: false },
+    { src: "~/plugins/vue-popup.js", ssr: false },
+    { src: "~/plugins/vue-js-modal.js", ssr: false }
+    // { src: "~/plugins/modals/v-modal.js", ssr: false}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -41,6 +44,7 @@ export default {
   content: {
     // Options
   },
+  serverMiddleware: ["~/middleware/logger"],
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {}
 };

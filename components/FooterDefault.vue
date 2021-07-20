@@ -24,7 +24,7 @@
           <div class="info-feature">
             <div class="introduction info-3 info-left">
                 <b-navbar-nav>
-                  <h3>Hello world</h3>
+                  <h3>Trang chủ</h3>
                     <b-nav-item href="/course" >Getting started</b-nav-item>
                     <b-nav-item href="" >Components</b-nav-item>
                     <b-nav-item href="" >Icons</b-nav-item>
@@ -33,7 +33,7 @@
             <div class="introduction info-3 info-between">
               
                 <b-navbar-nav>
-                                <h3>Hello world</h3>
+                                <h3>Về chúng tôi</h3>
 
                     <b-nav-item href="/course" >Getting started</b-nav-item>
                     <b-nav-item href="" >Components</b-nav-item>
@@ -42,7 +42,7 @@
             </div>
             <div class="introduction info-3 info-right" style="text-align:end"> 
                 <b-navbar-nav>
-                                <h3>Hello world</h3>
+                                <h3>Khóa học</h3>
 
                     <b-nav-item href="/course" >Getting started</b-nav-item>
                     <b-nav-item href="" >Components</b-nav-item>

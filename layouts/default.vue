@@ -14,6 +14,7 @@ import Footer from '~/components/FooterDefault'
 
 
 export default {
+ 
   methods: {
   },
   components: {
